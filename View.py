@@ -6,9 +6,22 @@ def display_menu():
     return choice
 
 def get_numbers():
-    num_1 = int(input("Введите 1 число: "))
-    num_2 = int(input("Введите 2 число: "))
-    return num_1, num_2
+    num_1 = input("Введите 1 число: ")
+    user_input1 = num_1
+
+    if user_input1.isdigit():
+        number1 = int(user_input1)  # Преобразование в целое число
+        print("Вы ввели число:", number1)
+    else:
+        print("Ошибка: введено не число.")
+    num_2 = input("Введите 2 число: ")
+    user_input2 = num_2
+
+    if user_input2.isdigit():
+        number2 = int(user_input1)  # Преобразование в целое число
+        print("Вы ввели число:", number2)
+    else:
+        print("Ошибка: введено не число.")
 
 def show_answer(result):
     print("Ответ:", result)
